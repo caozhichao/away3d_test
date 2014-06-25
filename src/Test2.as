@@ -13,7 +13,7 @@ package
 	public class Test2 extends Sprite
 	{
 		
-		[Embed(source="../assets/texture.jpg")]
+		[Embed(source="../assets/1.jpg")]
 		public var Earth:Class;
 		
 		private var _view3d:View3D;
@@ -37,8 +37,8 @@ package
 //			sphereGeometry.segmentsW *= 2;
 //			sphereGeometry.segmentsH *= 2;
 			sphere2 = new Mesh(sphereGeometry);
-			_view3d.scene.addChild(sphere1);
-			_view3d.scene.addChild(sphere2);
+//			_view3d.scene.addChild(sphere1);
+//			_view3d.scene.addChild(sphere2);
 			
 			sphere2.x += 450;
 			
@@ -47,7 +47,7 @@ package
 		private function init3DEngine():void
 		{
 			_view3d = new View3D();
-//			_view3d.background = Cast.bitmapTexture(Earth);
+			_view3d.background = Cast.bitmapTexture(Earth);
 			
 			_view3d.width = 1000;
 			_view3d.height = 800;

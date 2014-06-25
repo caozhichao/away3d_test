@@ -1,5 +1,16 @@
 package
 {
+	import flash.display.Bitmap;
+	import flash.display.BitmapData;
+	import flash.display.Sprite;
+	import flash.events.Event;
+	import flash.events.KeyboardEvent;
+	import flash.events.MouseEvent;
+	import flash.filesystem.File;
+	import flash.geom.Vector3D;
+	
+	import mx.core.FlexTextField;
+	
 	import away3d.bounds.AxisAlignedBoundingBox;
 	import away3d.cameras.Camera3D;
 	import away3d.containers.Scene3D;
@@ -7,6 +18,7 @@ package
 	import away3d.controllers.FirstPersonController;
 	import away3d.controllers.HoverController;
 	import away3d.debug.AwayStats;
+	import away3d.debug.Trident;
 	import away3d.entities.Mesh;
 	import away3d.events.AssetEvent;
 	import away3d.library.AssetLibrary;
@@ -22,17 +34,6 @@ package
 	import away3d.primitives.PlaneGeometry;
 	import away3d.primitives.SphereGeometry;
 	import away3d.textures.BitmapTexture;
-	
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.KeyboardEvent;
-	import flash.events.MouseEvent;
-	import flash.filesystem.File;
-	import flash.geom.Vector3D;
-	
-	import mx.core.FlexTextField;
 	
 	[SWF(width="1024", height="768", frameRate="60")]
 	public class FirstPersonControllerDemo extends Sprite
@@ -54,7 +55,7 @@ package
 		private var _directFront:Boolean = false;
 		private var _directBack:Boolean = false;
 		
-		[Embed(source="./back.jpg")]
+		[Embed(source="../assets/1.jpg")]
 		private var back:Class;
 		
 		public function FirstPersonControllerDemo()
@@ -104,6 +105,7 @@ package
 				this._view3D.scene.addChild(mesh);
 			}
 			
+			this._view3D.scene.addChild(new Trident());
 			//添加底图
 			var backGeo:PlaneGeometry = new PlaneGeometry(1500, 1500, 1, 1, true);
 			var backMaterial:MaterialBase = new TextureMaterial(new BitmapTexture((new back() as Bitmap).bitmapData));

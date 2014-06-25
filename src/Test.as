@@ -3,6 +3,7 @@ package
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
 	import flash.display.Sprite;
+	import flash.display.StageAlign;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
 	import flash.geom.Vector3D;

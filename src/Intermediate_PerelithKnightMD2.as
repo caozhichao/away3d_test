@@ -65,7 +65,7 @@ package
 	
 	import utils.*;
 	
-	[SWF(backgroundColor="#000000", frameRate="30", quality="LOW")]
+	[SWF(backgroundColor="#000000", frameRate="60", quality="LOW")]
 	public class Intermediate_PerelithKnightMD2 extends Sprite
 	{
 		//signature swf

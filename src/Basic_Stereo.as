@@ -33,7 +33,7 @@ package {
 			_view.camera = _camera;
 			_view.stereoEnabled = true;
 //			_view.stereoRenderMethod = new AnaglyphStereoRenderMethod();
-			_view.stereoRenderMethod = new InterleavedStereoRenderMethod();
+//			_view.stereoRenderMethod = new InterleavedStereoRenderMethod();
 			addChild(_view);
 			
 			_cube = new Mesh(new CubeGeometry(), new ColorMaterial(0xffcc00));

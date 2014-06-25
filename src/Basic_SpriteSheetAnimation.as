@@ -82,12 +82,12 @@ package {
 			
 			//setup the camera
 			_view.camera.z = -1500;
-			_view.camera.y = 200;
+//			_view.camera.y = 200;
 			_view.camera.lookAt(new Vector3D());
 			
 			//setup the meshes and their SpriteSheetAnimator
 			prepareSingleMap();
-			prepareMultipleMaps();
+//			prepareMultipleMaps();
 			
 			//setup the render loop
 			addEventListener(Event.ENTER_FRAME, _onEnterFrame);
@@ -123,10 +123,10 @@ package {
 			//asign the animator
 			mesh.animator = spriteSheetAnimator;
 			// because our very simple map has only 4 images in itself, playing it the same speed as the swf would be way too fast.
-			spriteSheetAnimator.fps = 4;
+			spriteSheetAnimator.fps = 1;
 			//start play the animation
 			spriteSheetAnimator.play(animID);
-  
+			
 			_view.scene.addChild(mesh);
 		}
 
